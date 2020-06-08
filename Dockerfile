@@ -1,4 +1,4 @@
-FROM gcr.io/lolc-ci-cd/base-image-jre:1.0.0
+FROM openjdk:8-jdk
 ARG ARTIFACT
 COPY ${ARTIFACT} app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
